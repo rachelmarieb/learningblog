@@ -13,6 +13,30 @@
  *= require_tree .
  *= require_self
  */
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
+
+$body-bg:                          #ECECEA;
+$font-family-sans-serif:           'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$navbar-height:                    45px;
+$navbar-default-bg:                white;
+$navbar-default-brand-color:       #558C89;
+$brand-primary:                    #558C89;
+$jumbotron-bg:                     white;
+
+/* Mixins */
+@mixin transition ($seconds) {
+    -webkit-transition: $seconds;
+    -moz-transition: $seconds;
+    -o-transition: $seconds;
+    transition: $seconds;
+}
 @import "bootstrap-sprockets";
 @import "bootstrap";
-
+a {
+     color: #D9853B;
+     @include transition(.4s);
+     &:hover {
+          color: darken(#D9853B, 10%);
+          text-decoration: none;
+     }
+}
